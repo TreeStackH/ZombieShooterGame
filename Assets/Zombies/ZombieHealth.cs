@@ -4,7 +4,12 @@ using UnityEngine;
 
 public class ZombieHealth : MonoBehaviour
 {
-    [SerializeField] private int health = 100;
+    [SerializeField] private int health = 30;
+    [SerializeField] private Animator animator;
+
+    void Start(){
+        animator = GetComponentInChildren<Animator>();
+    }
 
     void OnCollisionEnter(Collision collision)
     {
@@ -14,6 +19,25 @@ public class ZombieHealth : MonoBehaviour
             Debug.Log(string.Format("Zombie shot: {0}", health));
 
             // trigger animation saying "-10"
+
+            if(health <= 0){
+                Death();
+            }
         }
-    }    
+    }
+
+    void Death(){
+        Debug.Log("Died");
+        
+        // trigger death animation
+        animator.SetTrigger("dead");
+
+        // deletes zombie
+        // Destroy(this.gameObject);
+
+        // stop the zombie moving
+        GetComponent<ZombieMovement>().StopMovement();
+
+        GameManager.Instance.IncreaseKills();
+    }
 }
