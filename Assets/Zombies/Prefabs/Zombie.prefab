@@ -64,6 +64,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 30
+  animator: {fileID: 0}
 --- !u!114 &7753937483545166113
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -172,6 +173,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Zombie1@Zombie Walk
       objectReference: {fileID: 0}
+    - target: {fileID: 2106145266610383287, guid: 5783dcfde6244c9498fbeb967fc4e03e,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: -8469494145858465668, guid: bfe5a18ae4985884386506e21ef5a9bc,
+        type: 3}
     - target: {fileID: 5866666021909216657, guid: 5783dcfde6244c9498fbeb967fc4e03e,
         type: 3}
       propertyPath: m_Controller

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -362,6 +362,12 @@ PrefabInstance:
       propertyPath: m_Center.y
       value: 1.1
       objectReference: {fileID: 0}
+    - target: {fileID: 8548116837574410359, guid: 3641878a6f3661040aa466b135a4a645,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: -8469494145858465668, guid: bfe5a18ae4985884386506e21ef5a9bc,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3641878a6f3661040aa466b135a4a645, type: 3}
 --- !u!1001 &410659521
@@ -431,6 +437,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8548116837574410359, guid: 3641878a6f3661040aa466b135a4a645,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: -8469494145858465668, guid: bfe5a18ae4985884386506e21ef5a9bc,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3641878a6f3661040aa466b135a4a645, type: 3}
 --- !u!1 &452693994
@@ -2034,6 +2046,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8548116837574410359, guid: 3641878a6f3661040aa466b135a4a645,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: -8469494145858465668, guid: bfe5a18ae4985884386506e21ef5a9bc,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3641878a6f3661040aa466b135a4a645, type: 3}
 --- !u!1001 &7753937483065547074
@@ -2103,6 +2121,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8548116837574410359, guid: 3641878a6f3661040aa466b135a4a645,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: -8469494145858465668, guid: bfe5a18ae4985884386506e21ef5a9bc,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3641878a6f3661040aa466b135a4a645, type: 3}
 --- !u!1001 &8631221851604537595
