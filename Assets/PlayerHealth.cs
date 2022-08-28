@@ -12,10 +12,11 @@ public class PlayerHealth : MonoBehaviour
 
     void OnCollisionStay(Collision collision)
     {
-        if (collision.gameObject.tag == "Zombies"){
+        if((collision.gameObject.tag == "Zombies") && (health>0)){
             // for now, just default -1 damage
             // TODO: make 'damage' an attribute on the zombies
             health-=1;
+
             Debug.Log(string.Format("Player damaged: {0}", health));
 
             // trigger UI change
