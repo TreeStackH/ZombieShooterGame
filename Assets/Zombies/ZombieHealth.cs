@@ -1,13 +1,16 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using TMPro;
 using UnityEngine;
 
 public class ZombieHealth : MonoBehaviour
 {
     [SerializeField] private int health = 30;
-    [SerializeField] private Animator animator;
+    private Animator animator;
 
-    void Start(){
+    [Header("UI")]
+    [SerializeField] private Transform canvasTransform;
+    [SerializeField] private GameObject damageTextObject;
+
+    void Awake(){
         animator = GetComponentInChildren<Animator>();
     }
 
@@ -18,7 +21,7 @@ public class ZombieHealth : MonoBehaviour
             health-=10;
             Debug.Log(string.Format("Zombie shot: {0}", health));
 
-            // trigger animation saying "-10"
+            DamageSelfText(10);
 
             if(health <= 0){
                 Death();
@@ -39,5 +42,11 @@ public class ZombieHealth : MonoBehaviour
         GetComponent<ZombieMovement>().StopMovement();
 
         GameManager.Instance.IncreaseKills();
+    }
+    //User damage feedback on zombies
+    private void DamageSelfText(int amountOfDamage) {
+        GameObject damageObjectInstance = Instantiate(damageTextObject, canvasTransform);
+
+        //damageObjectInstance.GetComponentInChildren<TMP_Text>().text = "-" + amountOfDamage;
     }
 }
