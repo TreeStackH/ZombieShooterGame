@@ -26,6 +26,21 @@ public class PlayerHealth : MonoBehaviour
                 Death();
             }
         }
+        //hit heart
+        if((collision.gameObject.tag == "Item") && (health <= 100))
+        {
+            if (health > 90)
+            {
+                health = 100;
+            }
+            else
+            {
+                health += 10;
+            }
+            Destroy(collision.gameObject);
+            UIManager.Instance.UpdateHealth(health);
+        }
+
     }
 
     void Death(){
